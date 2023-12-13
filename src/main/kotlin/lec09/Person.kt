@@ -19,7 +19,13 @@ class Person ( // 주 생성자에 파라미터가 없으면, 생략 가능
         }
     }
 
-//    // 추가 생성자 (부 생성자) - 디폴트 파라미터 대신 사용 가능
-//    constructor(name: String) : this(name, 1)
-//    constructor(age: Int) : this("이름 없음", 1)
+    // 1. 함수로 만들기
+    fun isAdult(): Boolean {
+        return this.age >= 20
+    }
+
+    // 2. 프로퍼티처럼 만들기 - custom getter
+    // isAdult2 라는 프로퍼티를 get 했을 때 아래 get() 로직을 실행시킴
+    val isAdult2: Boolean
+        get() = this.age >= 20
 }
