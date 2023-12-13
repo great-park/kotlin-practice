@@ -9,18 +9,21 @@ fun main() {
 }
 
 class Person ( // 주 생성자에 파라미터가 없으면, 생략 가능
-    val name: String = "이름 없음", // 디폴트 값
-//    name: String,
+//    val name: String = "이름 없음", // 디폴트 값
+    name: String,
     var age: Int = 1
 ) {
 
-//    val name: String = name
-//        get() = field.uppercase() // backing field (자기 자신을 가리킴),  만약 name으로 쓰면 무한 루프
+    var name: String = name
+        get() = field.uppercase() // backing field (자기 자신을 가리킴),  만약 name으로 쓰면 무한 루프
+        set(value) {
+            field = value.uppercase()
+        }
 
-    fun getUppercaseName(): String = this.name.uppercase()
-
-    val upperName: String
-        get() = this.name.uppercase()
+//    fun getUppercaseName(): String = this.name.uppercase()
+//
+//    val upperName: String
+//        get() = this.name.uppercase()
 
     // init 블록 : 생성자가 호출될 때 실행되는 블록
     init {
