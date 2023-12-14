@@ -18,6 +18,8 @@ fun main() {
     val isApple2: (Fruit) -> Boolean = { fruit: Fruit -> fruit.name == "Apple" }
 
     filterFruits(fruits, isApple).forEach { println(it) } // 람다를 파라미터로!
+
+    // 코틀린에서는 함수가 1급 시민이다. 자바에서는 2급 시민임
 }
 
 private fun filterFruits(
