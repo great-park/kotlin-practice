@@ -17,3 +17,7 @@ class Person private constructor(
             }
         }
 }
+
+object Singleton {
+    var a: Int = 0
+}
