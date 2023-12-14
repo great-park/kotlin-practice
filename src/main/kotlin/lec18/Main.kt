@@ -17,6 +17,7 @@ fun main() {
     // 람다를 만드는 방법 2
     val isApple2: (Fruit) -> Boolean = { fruit: Fruit -> fruit.name == "Apple" }
 
+    filterFruits(fruits, isApple).forEach { println(it) } // 람다를 파라미터로!
 }
 
 private fun filterFruits(
