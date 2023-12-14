@@ -15,7 +15,7 @@ fun String.lastChar(): Char { // 수신객체
     return this[this.length - 1]
 }
 
-p
+
 // 중위 함수
 // "변수" "함수" "argument" 순서로 호출할 수 있는 함수
 infix fun Int.add2(other: Int): Int {
