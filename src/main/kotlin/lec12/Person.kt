@@ -6,6 +6,8 @@ class Person private constructor(
 ) {
         companion object Factory : Log { // 클래스와 동행하는 오브젝트, 하나의 객체로 취급: 이름도 붙일 수 있고 인터페이스 구현도 가능..
             private const val MIN_AGE: Int = 1 // const: 컴파일 시점에 결정되는 상수
+
+            @JvmStatic //
             fun newBaby(name: String, age: Int): Person {
                 return Person(name, MIN_AGE)
             }
