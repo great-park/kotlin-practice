@@ -17,4 +17,7 @@ class Penguin(
         super<Swimmable>.act()
         super<Flyable>.act() // super<인터페이스 이름>.메소드 이름
     }
+
+    override val swimAbility: Int
+        get() = 3
 }
