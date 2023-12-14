@@ -1,5 +1,22 @@
 package lec12
 
+fun main() {
+    moveSomething(object : Movable {
+        override fun move() {
+            println("움직입니다.")
+        }
+
+        override fun fly() {
+            println("날아갑니다.")
+        }
+    })
+}
+
+private fun moveSomething(movable: Movable) {
+    movable.move()
+    movable.fly()
+}
+
 class Person private constructor(
     var name: String,
     var age: Int
