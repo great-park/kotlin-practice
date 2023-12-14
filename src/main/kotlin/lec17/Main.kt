@@ -3,6 +3,8 @@ package lec17
 fun main() {
     val str = "Hello"
     println(str.lastChar()) // 마치 원래 String에 있는 멤버 함수처럼 사용할 수 있다.
+
+    println(1 add2 2) // 중위 함수
 }
 
 // 확장 함수: 코드는 클래스 밖에서 작성하고, 마치 내부 함수인 것처럼 사용할 수 있음
@@ -11,4 +13,11 @@ fun main() {
 // 오버라이드될 경우, 해당 변수의 현재 타입 즉, 정적인 타입에 의해 어떤 확장 함수가 호출될지 결정된다.
 fun String.lastChar(): Char { // 수신객체
     return this[this.length - 1]
+}
+
+p
+// 중위 함수
+// "변수" "함수" "argument" 순서로 호출할 수 있는 함수
+infix fun Int.add2(other: Int): Int {
+    return this + other
 }
